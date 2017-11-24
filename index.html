@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/unslider.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.6/css/swiper.min.css">
     <style>
         .w3-btn {
             margin-bottom: 10px;
@@ -43,7 +45,7 @@
             float: left;
             text-align: center;
             border-radius: 5%;
-            background-color: green;
+            background-color: rgba(46, 238, 46, 0.5);
         }
 
         .nav-logo img {
@@ -52,6 +54,9 @@
         }
 
         .nav-head {
+            background-color:rgba(46, 238, 46, 0.5);
+            font-weight:bold;
+            color:rgb(245, 149, 6);
             float: left;
             width: calc(100% - 80px);
             font-size: 40px;
@@ -88,6 +93,13 @@
             background-size: cover;
         }
 
+        .menu-image {
+            width: 100%;
+            height: 500px;
+            background-position: center;
+            background-size: cover;
+        }
+
         .image1 {
             background-image: url('img/beef.png');
         }
@@ -103,6 +115,26 @@
         .image4 {
             background-image: url('img/coffee.jpeg');
         }
+
+        .image5 {
+            background-image: url('img/menu.jpg');
+        }
+
+        .image6 {
+            background-image: url('img/drinks.jpg');
+        }
+
+        .image7 {
+            background-image: url('img/snacks.jpg');
+        }
+
+        .emenu {
+            width: 100%;
+            height: 600px;
+            display: cover;
+
+        }
+
 
         .unslider-arrow.prev {
             top: 250px;
@@ -126,7 +158,11 @@
             text-align: center;
         }
 
-        .container1,.container2,.container3,.container4,.container5 {
+        .container1,
+        .container2,
+        .container3,
+        .container4,
+        .container5 {
             position: relative;
         }
 
@@ -135,6 +171,18 @@
         }
 
         .button1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .button2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .button3 {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -149,13 +197,15 @@
         }
 
         .container4 img {
+            position:relative;
             max-width: 100%;
         }
 
         .container5 img {
             max-width: 100%;
         }
-        .arrow-down{
+
+        .arrow-down {
             position: absolute;
             bottom: -40px;
             left: 50%;
@@ -163,6 +213,25 @@
             z-index: 99;
         }
 
+        .order.button {
+            background-color:white;
+            /* Green */
+            position:absolute;
+            color: black;
+            font-weight:bold;
+            border-radius:50%; 
+            box-shadow:5px;  
+            padding: 0 16px;
+            text-align: center;
+            font-kerning:10px;  
+            text-decoration: none;
+            display: inline-block;
+            bottom: 50px;
+            left:50%;
+            margin-left:-48px; 
+            font-size: 30px;
+            cursor: pointer;
+        }
 
 
 
@@ -181,99 +250,107 @@
 </head>
 
 <body>
-    <div id="nav" class="nav">
-        <div class="nav-logo">
-            <img src="img/logo.png" alt="">
+
+    <body>
+        <div id="nav" class="nav">
+            <div class="nav-logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="nav-head">ELLA'S LUNCH & SNACKS</div>
+            <ul class="menu">
+                <li class="menu_item">
+                    <a href="#about_us">關於我們</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#season_menu">當季菜單</a>
+                </li>
+                <li class="menu_item">
+                    <a href="">連絡我們</a>
+                </li>
+                <li class="menu_item">
+                    <a href="">相關連結</a>
+                </li>
+                <li class="menu_item">
+                    <a href="">寶貴意見</a>
+                </li>
+            </ul>
+            <div style="clear:both;"></div>
         </div>
-        <div class="nav-head">ELLA'S LUNCH & SNACKS</div>
-        <ul class="menu">
-            <li class="menu_item">
-                <a href="">關於我們</a>
-            </li>
-            <li class="menu_item">
-                <a href="">當季菜單</a>
-            </li>
-            <li class="menu_item">
-                <a href="">連絡我們</a>
-            </li>
-            <li class="menu_item">
-                <a href="">相關連結</a>
-            </li>
-            <li class="menu_item">
-                <a href="">寶貴意見</a>
-            </li>
-        </ul>
-        <div style="clear:both;"></div>
-    </div>
-    <div class="my-slider">
-        <ul>
-            <li>
-                <div class="bg-image image1"></div>
-            </li>
-            <li>
-                <div class="bg-image image2"></div>
-            </li>
-            <li>
-                <div class="bg-image image3"></div>
-            </li>
-            <li>
-                <div class="bg-image image4"></div>
-            </li>
-        </ul>
-    </div>
-    <div style="text-align:center;">
-        <span class="glyphicon glyphicon-triangle-bottom"></span>
-    </div>
-
-    <div class="container1">
-        <img src="img/bg1.png" alt="">
-        <div class="button1">
-            <button class="w3-button w3-white w3-border w3-round-large">YES</button>
-            <button class="w3-button w3-white w3-border w3-border-red w3-round-large">NO</button>
+        <div class="my-slider">
+            <ul>
+                <li>
+                    <div class="bg-image image1"></div>
+                </li>
+                <li>
+                    <div class="bg-image image2"></div>
+                </li>
+                <li>
+                    <div class="bg-image image3"></div>
+                </li>
+                <li>
+                    <div class="bg-image image4"></div>
+                </li>
+            </ul>
         </div>
-        <div class="arrow-down">
-            <span class="glyphicon glyphicon-triangle-bottom"></span>
+
+        <div style="text-align:center;">
+            <div class="arrow-down">
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </div>
+
+            <div class="container1">
+                <img src="img/bg1.png" alt="">
+                <div class="button1">
+                    <button class="w3-button w3-xlarge w3-circle w3-white">YES</button>
+                    <button class="w3-button w3-xlarge w3-circle w3-white">NO</button>
+                </div>
+                <div class="arrow-down">
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </div>
+            </div>
+            <div class="container2">
+                <img src="img/bg2.jpg" alt="">
+                <div class="button2">
+                    <button class="w3-button w3-xlarge w3-circle w3-white">YES</button>
+                    <button class="w3-button w3-xlarge w3-circle w3-white">NO</button>
+                </div>
+                <div class="arrow-down">
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </div>
+            </div>
+            <div class="container3">
+                <img src="img/bg3.jpg" alt="">
+                <div class="button3">
+                    <button class="w3-button w3-xlarge w3-circle w3-white">YES</button>
+                    <button class="w3-button w3-xlarge w3-circle w3-white">NO</button>
+                </div>
+                <div class="arrow-down">
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </div>
+            </div>
+            <div class="container4">
+                <img class="emenu" src="img/setmenu.jpg" width="100%">
+                <img class="emenu" src="img/drinks.jpg" width="100%">
+                <img class="emenu" src="img/snacks.jpg" width="100%">
+                <button class="order button">訂餐</button>
+
+
+                <div class="arrow-down">
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container2">
-        <img src="img/bg2.jpg" alt="">
-        <div class="arrow-down">
-            <span class="glyphicon glyphicon-triangle-bottom"></span>
+        <div class="container5" id="about_us">
+            <img src="img/bg5.jpg" alt="">
         </div>
-    </div>
-    <div class="container3">
-        <img src="img/bg3.jpg" alt="">
-        <div class="arrow-down">
-            <span class="glyphicon glyphicon-triangle-bottom"></span>
-        </div>
-    </div>
-    <div class="container4">
-        <img src="img/bg4.jpg" alt="">
-        <div class="arrow-down">
-            <span class="glyphicon glyphicon-triangle-bottom"></span>
-        </div>
-    </div>
-    <div class="container5">
-        <img src="img/bg5.jpg" alt="">  
-    </div>
 
 
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/unslider-min.js"></script>
+        <script src="js/w3.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.6/js/swiper.min.js"></script>
 
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/unslider-min.js"></script>
-    <script>
-
-        $('.my-slider').unslider({
-            animation: 'vertical',
-            autoplay: true,
-            infinite: true,
-            speed: 10,
-            delay: 3000,
-        });
-
-    </script>
-
-    <!-- 固定Nav至上方
+        <!-- 固定Nav至上方
     <script>
         $(window).scroll(function () {
             var scrollTop = $(window).scrollTop();
@@ -284,6 +361,22 @@
             }
         });
     </script> -->
-</body>
+
+
+        <script>
+            $('.my-slider').unslider({
+                animation: 'vertical',
+                autoplay: true,
+                infinite: true,
+                speed: 10,
+                delay: 3000,
+            });
+        </script>
+        <script>
+            w3.slideshow(".emenu");
+        </script>
+       
+        
+    </body>
 
 </html>
