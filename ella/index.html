@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#db5945">
     <title>ELLA'S LUNCH and SNACKS</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110242568-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110242568-1');
+    </script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -28,7 +38,7 @@
         }
 
         .nav {
-            position: static;
+            position: relative;
             margin: auto;
             width: 100%;
             text-align: center;
@@ -42,26 +52,27 @@
         }
 
         .nav-logo {
-            float: left;
+            position: absolute;
             text-align: center;
-            border-radius: 5%;
-            background-color: rgba(46, 238, 46, 0.5);
         }
 
         .nav-logo img {
+            margin-left: 15px;
+            margin-top: 10px;
+            margin-bottom: 5px;
             display: block;
             width: 80px;
         }
 
         .nav-head {
-            background-color:rgba(46, 238, 46, 0.5);
-            font-weight:bold;
-            color:rgb(245, 149, 6);
+            background-color: rgba(46, 238, 46, 0.5);
+            font-weight: bold;
+            color: rgb(245, 149, 6);
             float: left;
-            width: calc(100% - 80px);
+            width: calc(100% - 0px);
             font-size: 40px;
             line-height: 65.8px;
-            height: 65.8px;
+            height: 80px;
         }
 
         .navbar {
@@ -81,9 +92,13 @@
         }
 
         .menu_item {
+            margin-left: 10px;
+            margin-top: 15px;
+            padding: 5px;
             display: block;
             color: brown;
             font-size: 30px;
+
         }
 
         .bg-image {
@@ -101,11 +116,11 @@
         }
 
         .image1 {
-            background-image: url('img/beef.png');
+            background-image: url('img/beef.jpg');
         }
 
         .image2 {
-            background-image: url('img/chicken.png');
+            background-image: url('img/salad.png');
         }
 
         .image3 {
@@ -197,7 +212,7 @@
         }
 
         .container4 img {
-            position:relative;
+            position: relative;
             max-width: 100%;
         }
 
@@ -214,21 +229,21 @@
         }
 
         .order.button {
-            background-color:white;
+            background-color: white;
             /* Green */
-            position:absolute;
+            position: absolute;
             color: black;
-            font-weight:bold;
-            border-radius:50%; 
-            box-shadow:5px;  
+            font-weight: bold;
+            border-radius: 50%;
+            box-shadow: 5px;
             padding: 0 16px;
             text-align: center;
-            font-kerning:10px;  
+            font-kerning: 10px;
             text-decoration: none;
             display: inline-block;
             bottom: 50px;
-            left:50%;
-            margin-left:-48px; 
+            left: 50%;
+            margin-left: -48px;
             font-size: 30px;
             cursor: pointer;
         }
@@ -265,13 +280,13 @@
                     <a href="#season_menu">當季菜單</a>
                 </li>
                 <li class="menu_item">
-                    <a href="">連絡我們</a>
+                    <a href="#contact_us">連絡我們</a>
                 </li>
                 <li class="menu_item">
-                    <a href="">相關連結</a>
+                    <a href="links">相關連結</a>
                 </li>
                 <li class="menu_item">
-                    <a href="">寶貴意見</a>
+                    <a href="comments">寶貴意見</a>
                 </li>
             </ul>
             <div style="clear:both;"></div>
@@ -328,7 +343,7 @@
                     <span class="glyphicon glyphicon-triangle-bottom"></span>
                 </div>
             </div>
-            <div class="container4">
+            <div class="container4" id="season_menu">
                 <img class="emenu" src="img/setmenu.jpg" width="100%">
                 <img class="emenu" src="img/drinks.jpg" width="100%">
                 <img class="emenu" src="img/snacks.jpg" width="100%">
@@ -375,8 +390,8 @@
         <script>
             w3.slideshow(".emenu");
         </script>
-       
-        
+
+
     </body>
 
 </html>
