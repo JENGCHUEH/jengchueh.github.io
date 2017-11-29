@@ -189,6 +189,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
+            margin-left: -76.242px;
         }
 
         .button2 {
@@ -217,16 +218,9 @@
         }
 
         .container5 img {
-            max-width: 100%;
+            width: 100%;
         }
 
-        .arrow-down {
-            position: absolute;
-            bottom: -40px;
-            left: 50%;
-            margin-left: -30px;
-            z-index: 99;
-        }
 
         .order.button {
             background-color: white;
@@ -261,111 +255,127 @@
                 margin: 0px;
             }
         }
+
+        #myBtn {
+            opacity: 0;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        #myBtn.show {
+            opacity: 1;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 
 <body>
-
-    <body>
-        <div id="nav" class="nav">
-            <div class="nav-logo">
-                <img src="img/logo.png" alt="">
-            </div>
-            <div class="nav-head">ELLA'S LUNCH & SNACKS</div>
-            <ul class="menu">
-                <li class="menu_item">
-                    <a href="#about_us">關於我們</a>
-                </li>
-                <li class="menu_item">
-                    <a href="#season_menu">當季菜單</a>
-                </li>
-                <li class="menu_item">
-                    <a href="#contact_us">連絡我們</a>
-                </li>
-                <li class="menu_item">
-                    <a href="links">相關連結</a>
-                </li>
-                <li class="menu_item">
-                    <a href="comments">寶貴意見</a>
-                </li>
-            </ul>
-            <div style="clear:both;"></div>
+    <div id="nav" class="nav">
+        <div class="nav-logo">
+            <img src="img/logo.png" alt="">
         </div>
-        <div class="my-slider">
-            <ul>
-                <li>
-                    <div class="bg-image image1"></div>
-                </li>
-                <li>
-                    <div class="bg-image image2"></div>
-                </li>
-                <li>
-                    <div class="bg-image image3"></div>
-                </li>
-                <li>
-                    <div class="bg-image image4"></div>
-                </li>
-            </ul>
+        <div class="nav-head">ELLA'S LUNCH & SNACKS</div>
+        <ul class="menu">
+            <li class="menu_item">
+                <a href="#about_us">關於我們</a>
+            </li>
+            <li class="menu_item">
+                <a href="#season_menu">當季菜單</a>
+            </li>
+            <li class="menu_item">
+                <a href="#contact_us">連絡我們</a>
+            </li>
+            <li class="menu_item">
+                <a href="#links">相關連結</a>
+            </li>
+            <li class="menu_item">
+                <a href="#comments">寶貴意見</a>
+            </li>
+        </ul>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="my-slider">
+        <ul>
+            <li>
+                <div class="bg-image image1"></div>
+            </li>
+            <li>
+                <div class="bg-image image2"></div>
+            </li>
+            <li>
+                <div class="bg-image image3"></div>
+            </li>
+            <li>
+                <div class="bg-image image4"></div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div style="text-align:center;">
+
+
+        <div class="container1" id="eat_outside">
+            <img src="img/bg1.png" alt="">
+            <div class="button1">
+                <a href="#utensils" class="w3-button w3-xlarge w3-circle w3-white">YES</a>
+                <a href="#about_us" class="w3-button w3-xlarge w3-circle w3-white">NO</a>
+            </div>
+
         </div>
-
-        <div style="text-align:center;">
-            <div class="arrow-down">
-                <span class="glyphicon glyphicon-triangle-bottom"></span>
+        <div class="container2" id="utensils">
+            <img src="img/bg2.jpg" alt="">
+            <div class="button2">
+                <a href="#order_q" class="w3-button w3-xlarge w3-circle w3-white">YES</a>
+                <a href="#about_us"class="w3-button w3-xlarge w3-circle w3-white">NO</a>
             </div>
 
-            <div class="container1">
-                <img src="img/bg1.png" alt="">
-                <div class="button1">
-                    <button class="w3-button w3-xlarge w3-circle w3-white">YES</button>
-                    <button class="w3-button w3-xlarge w3-circle w3-white">NO</button>
-                </div>
-                <div class="arrow-down">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </div>
-            </div>
-            <div class="container2">
-                <img src="img/bg2.jpg" alt="">
-                <div class="button2">
-                    <button class="w3-button w3-xlarge w3-circle w3-white">YES</button>
-                    <button class="w3-button w3-xlarge w3-circle w3-white">NO</button>
-                </div>
-                <div class="arrow-down">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </div>
-            </div>
-            <div class="container3">
-                <img src="img/bg3.jpg" alt="">
-                <div class="button3">
-                    <button class="w3-button w3-xlarge w3-circle w3-white">YES</button>
-                    <button class="w3-button w3-xlarge w3-circle w3-white">NO</button>
-                </div>
-                <div class="arrow-down">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </div>
-            </div>
-            <div class="container4" id="season_menu">
-                <img class="emenu" src="img/setmenu.jpg" width="100%">
-                <img class="emenu" src="img/drinks.jpg" width="100%">
-                <img class="emenu" src="img/snacks.jpg" width="100%">
-                <button class="order button">訂餐</button>
-
-
-                <div class="arrow-down">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </div>
-            </div>
         </div>
-        <div class="container5" id="about_us">
-            <img src="img/bg5.jpg" alt="">
+        <div class="container3" id="order_q">
+            <img src="img/bg3.jpg" alt="">
+            <div class="button3">
+                <a href="#season_menu" class="w3-button w3-xlarge w3-circle w3-white">YES</a>
+                <a href="#about_us" class="w3-button w3-xlarge w3-circle w3-white">NO</a>
+            </div>
+
         </div>
+        <div class="container4" id="season_menu">
+            <img class="emenu" src="img/setmenu.jpg" width="100%">
+            <img class="emenu" src="img/drinks.jpg" width="100%">
+            <img class="emenu" src="img/snacks.jpg" width="100%">
+            <button class="order button">訂餐</button>
+            <button onclick="myFunction()"></button>
 
 
-        <script src="js/jquery-3.2.1.js"></script>
-        <script src="js/unslider-min.js"></script>
-        <script src="js/w3.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.6/js/swiper.min.js"></script>
 
-        <!-- 固定Nav至上方
+        </div>
+    </div>
+    <div class="container5" id="about_us">
+        <img src="img/bg5.jpg" alt="">
+    </div>
+    <button id="myBtn" title="Go to top">Top</button>
+
+
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/unslider-min.js"></script>
+    <script src="js/w3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.6/js/swiper.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+
+    <!-- 固定Nav至上方
     <script>
         $(window).scroll(function () {
             var scrollTop = $(window).scrollTop();
@@ -378,20 +388,42 @@
     </script> -->
 
 
-        <script>
-            $('.my-slider').unslider({
-                animation: 'vertical',
-                autoplay: true,
-                infinite: true,
-                speed: 10,
-                delay: 3000,
+    <script>
+        $('.my-slider').unslider({
+            animation: 'vertical',
+            autoplay: true,
+            infinite: true,
+            speed: 10,
+            delay: 3000,
+        });
+    </script>
+    <script>
+        w3.slideshow(".emenu");
+    </script>
+    <!-- 回到最上 -->
+    <script>
+        if ($('#myBtn').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#myBtn').addClass('show');
+                    } else {
+                        $('#myBtn').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
             });
-        </script>
-        <script>
-            w3.slideshow(".emenu");
-        </script>
-
-
-    </body>
+            $('#myBtn').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
+    </script>
+</body>
 
 </html>
