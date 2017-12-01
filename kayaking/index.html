@@ -6,39 +6,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="css/unslider-dots.css">
+    <link rel="stylesheet" href="css/unslider.css"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 
     <style>
-        @media (min-width: 1600px){
-            .container{
-                width: 1500px;
-                max-width: 1500px;
-                margin:0 auto;
+        * {
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 1600px) {
+            .container {
+                max-width: 1200px;
+
             }
+
         }
-        body{
-            background-color: #000;
-           
-        }
-        .container{
+
+        .container {
             text-align: center;
-            position:relative;
+            /* position:relative; */
         }
+
         body {
             margin: 0;
         }
-        .nav{
+
+        .nav {
             display: inline;
         }
 
         .navigation {
-            height:50px;
+            width: 100%;
+            height: 50px;
             background-color: #070707;
-            position: relative;
-         }
+            position: fixed;
+
+        }
 
         .bar {
             width: 18px;
@@ -48,20 +54,23 @@
             margin: 3px 0;
             box-sizing: border-box;
         }
-        .b1{
-            
+
+        .b1 {
+
             transform: rotate(45deg);
         }
-        .b2{
-            width:0px;
+
+        .b2 {
+            width: 0px;
         }
-        .b3{
-            
+
+        .b3 {
+
             transform: rotate(-45deg);
         }
 
         .dropbtn {
-            width:30px;
+            width: 30px;
             height: 30px;
             background-color: #000000;
             color: white;
@@ -70,18 +79,19 @@
             border: none;
             cursor: pointer;
             position: absolute;
-            top:-10px;
-            left:40px;
+            top: 10px;
+            left: 40px;
         }
 
         .dropdown {
             position: relative;
-            display: inline-block;
+            width: 100%;
+            height: 100%;
         }
 
         .dropdown-content {
             display: none;
-            position:absolute;
+            position: absolute;
             background-color: #e7e6e6;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -104,18 +114,60 @@
             display: block;
         }
 
+        .sbg {
+            width: 100%;
+            height: 768px;
+            position: fixed;
+        }
+
+        .sbg-img1 {
+            width: 100%;
+            background-image: url('img/bg1.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .sbg-img2 {
+            width: 100%;
+            background-image: url('img/bg1.jpeg');
+            background-size: cover;
+            background-position: top;
+        }
+
+        .sbg-img3 {
+            width: 100%;
+            background-image: url('img/bg1.jpeg');
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .kbg2 {
+            width: 100%;
+            background-image: url('img/kbg2.jpg');
+            background-size: cover;
+            background-position: center;
+			height:1000px;
+        }
+
+        .kbg3 {
+            width: 100%;
+            background-image: url('img/kbg3.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
         .bg-img1 {
             width: 100%;
-           
             background-image: url('img/bg1.jpeg');
-            background-size: cover; 
+            background-size: cover;
             background-position: center;
-            /* height: calc(100vh - 30px); */
-           
+            height: 700px;
+            /* height: calc(100vh - 80px); */
         }
 
         .bg-img2 {
             background-image: url('img/theme.jpg');
+            height: 700px;
         }
 
         .bg-img3 {
@@ -124,75 +176,90 @@
             background-size: cover;
             height: 100%;
         }
-        .bg-img3:hover .index_linkl{
+
+        .bg-img3:hover .index_linkl {
             display: block;
         }
 
         .bg-img4 {
             background-image: url('img/index_right.jpg');
-            background-position: bottom; 
-            background-size: center; 
+            background-position: bottom;
+            background-size: center;
             height: 100%;
         }
 
         .bg-img5 {
             background-image: url('img/indexleft.png');
-            background-position: bottom; 
-            background-size: center; 
+            background-position: bottom;
+            background-size: center;
             height: 100%;
         }
-        .bg-img6{
+
+        .bg-img6 {
             background-image: url('img/MY_KAYAKING.jpg');
-            background-position: center; 
-            background-size: left; 
-            height: 100%;
+            background-position: center;
+            background-size: left;
+            height: 350px;
         }
-        .bg-img7{
-            background-image: url('img/contacts.jpg');
-            background-position: center; 
-            background-size: left; 
-            height: 100%;
-        }
-        .bg-img8{
+
+        .bg-img8 {
             background-image: url('img/');
-            background-position: center; 
-            background-size: left; 
+            background-position: center;
+            background-size: left;
             height: 100%;
         }
-        .bg-img9{
+
+        .bg-img9 {
             background-image: url('img/');
-            background-position:cover; 
-            background-size: centers; 
+            background-position: cover;
+            background-size: centers;
             height: 100%;
         }
-        
+
         .itemus {
-            
+
             width: 100%;
-            /* height: 30vh; */
+            /* height: 30vh;  */
             border: 1px solid rgb(5, 5, 5);
             padding: 15px;
             background-color: #fff;
-            
+            box-sizing: border-box;
+
         }
+
         .itemusb {
-            
+
             width: 100%;
             height: 35vh;
-            border: 1px solid rgb(5, 5, 5);
-            padding: 15px;
-            background-color: #fff;
-            
+            /* border: 1px solid rgb(5, 5, 5); */
+            padding: 0 0px 15px 15px;
+            /* background-color: #fff; */
         }
-        .bg-img7{
-            background-color: #2a92b8;
+
+        .itemusb2 {
+
+            width: 100%;
+            height: 35vh;
+            /* border: 1px solid rgb(5, 5, 5); */
+            padding: 0 15px 15px 0px;
+            /* background-color: #fff; */
         }
+
+        .bg-img7 {
+            background-image: url('img/contacts.jpg');
+            background-position: cover;
+            background-position-x: 50%;
+            background-size: center;
+            height:350px;
+        }
+
+
         .itemus>span {
             display: inline;
             font-size: 24px;
-            
+
         }
-        
+
         .item {
             margin-top: 30px;
             width: 100%;
@@ -200,6 +267,7 @@
             border: 1px solid white;
             padding: 15px;
         }
+
         .item1 {
             margin-top: 30px;
             width: 100%;
@@ -207,22 +275,24 @@
             /* border: 1px solid white; */
             /* padding: 15px; */
         }
-        .bg-img4:hover .index_linkl{
-            display: block;
-        }
-        .bg-img4:hover>div{
-            transform:skew(2,2);
-        }
 
-        .bg-img3:hover .index_linkm{
-            display: block;
-        }
-        .bg-img5:hover .index_linkr{
+        .bg-img4:hover .index_linkl {
             display: block;
         }
 
-        
-        
+        .bg-img4:hover>div {
+            transform: skew(2, 2);
+        }
+
+        .bg-img3:hover .index_linkm {
+            display: block;
+        }
+
+        .bg-img5:hover .index_linkr {
+            display: block;
+        }
+
+
         .item2 {
             margin-top: 30px;
             width: 100%;
@@ -230,350 +300,405 @@
             /* border: 1px solid white; */
             /* padding: 15px; */
         }
-       
-        .item-a{
+
+        .item-a {
             /* margin-top:10px; */
-            width:100%;
-            height:380px;
+            width: 100%;
+            height: 380px;
             /* border:1px solid white; */
-            padding:15px; 
+            padding: 15px;
         }
-        .item-b{
-            margin-top:15px;
-            width:100%;
-            height:203px;
-            border:0.5px solid rgb(255, 255, 255);
-            padding:15px;
-        }
-        .im{
-            height:568px;
-            border:1px solid white; 
-        }
-        .imrl{
-            
-            height:350px;
-             border:1px solid white; 
-        }
-        .imrl_bottoml{
-            background-color: rgba(255, 255, 255,0);
+
+        .item-b {
+            margin-top: 15px;
             width: 100%;
-            height:173px;
-            border:1px solid white; 
+            height: 203px;
+            border: 0.5px solid rgb(255, 255, 255);
+            padding: 15px;
         }
-        .imrl_bottoml:hover .index_linkbotl{
+
+        .im {
+            height: 568px;
+            border: 1px solid white;
+        }
+
+        .imrl {
+
+            height: 350px;
+            border: 1px solid white;
+        }
+
+        .imrl_bottoml {
+            background-color: rgba(255, 255, 255, 0);
+            width: 100%;
+            height: 173px;
+            border: 1px solid white;
+        }
+
+        .imrl_bottoml:hover .index_linkbotl {
             display: block;
         }
-        .imrl_bottomr{
-            background-color: rgba(255, 255, 255,0);
+
+        .imrl_bottomr {
+            background-color: rgba(255, 255, 255, 0);
             width: 100%;
-            height:173px;
-            border:1px solid white; 
+            height: 173px;
+            border: 1px solid white;
         }
-        .imrl_bottomr:hover .index_linkbotr{
+
+        .imrl_bottomr:hover .index_linkbotr {
             display: block;
         }
-        p{
+
+        p {
             text-align: center;
             font-size: 42px;
             color: #fff;
             line-height: 157px;
         }
-        .imrl p{
+
+        .imrl p {
             text-align: center;
             font-size: 42px;
             color: #fff;
             line-height: 350px;
         }
-        .bg-img3 P{
+
+        .bg-img3 P {
             letter-spacing: 1px;
-            font-family:"新細明體";
+            font-family: "新細明體";
             font-size: 47px;
             color: #fff;
             line-height: 568px;
 
         }
-        .index_linkl{
+
+        .index_linkl {
             display: none;
             text-align: center;
             background-color: #000;
-            border-radius:10%;
+            border-radius: 10%;
             color: #fff;
             font-size: 26px;
             position: absolute;
-            width:130px;
+            width: 130px;
             height: 50px;
-            left:127px;
-            top:255px;
-            }
-        .index_linkr{
-        display: none;
-        text-align: center;
-        background-color: #000;
-        border-radius:10%;
-        color: #fff;
-        font-size: 26px;
-        position: absolute;
-        width:130px;
-        height: 50px;
-        left:127px;
-        top:255px;
+            left: 127px;
+            top: 255px;
         }
-        .index_linkm{
+
+        .index_linkr {
             display: none;
             text-align: center;
             background-color: #000;
-            border-radius:10%;
+            border-radius: 10%;
             color: #fff;
             font-size: 26px;
             position: absolute;
-            width:130px;
+            width: 130px;
             height: 50px;
-            left:125px;
-            top:360px;
+            left: 127px;
+            top: 255px;
         }
-        .index_linkbotl{
+
+        .index_linkm {
             display: none;
             text-align: center;
             background-color: #000;
-            border-radius:10%;
+            border-radius: 10%;
             color: #fff;
             font-size: 26px;
             position: absolute;
-            width:130px;
+            width: 130px;
             height: 50px;
-            left:127px;
-            bottom:27px;
+            left: 125px;
+            top: 360px;
         }
-        .index_linkbotr{
+
+        .index_linkbotl {
             display: none;
             text-align: center;
             background-color: #000;
-            border-radius:10%;
+            border-radius: 10%;
             color: #fff;
             font-size: 26px;
             position: absolute;
-            width:130px;
+            width: 130px;
             height: 50px;
-            left:127px;
-            bottom:27px;
+            left: 127px;
+            bottom: 27px;
         }
-        p{
+
+        .index_linkbotr {
+            display: none;
+            text-align: center;
+            background-color: #000;
+            border-radius: 10%;
+            color: #fff;
+            font-size: 26px;
+            position: absolute;
+            width: 130px;
+            height: 50px;
+            left: 127px;
+            bottom: 27px;
+        }
+
+        p {
             letter-spacing: 1px;
-            font-family:"新細明體";
+            font-family: "新細明體";
             font-size: 36px;
             color: rgb(255, 255, 255);
-            margin:0;
+            margin: 0;
         }
-        .itemactive{
+
+        .itemactive {
             margin-top: 30px;
             width: 100%;
             height: 500px;
             border: 1px solid white;
             padding: 15px;
-        
+
         }
+
         .itemc {
-            margin-top: 30px;
+            margin-top: 10px;
             width: 100%;
             height: 700px;
             /* border: 1px solid white; */
-         
+            padding: 0 0 40px 0;
+            box-sizing: border-box;
+
         }
 
-        .itemca{
-            width:100%;
-            height:280px;
-            border:1px solid white;
-            
-        }
-        .itemcb{
-           
-                /* margin-top:15px; */
-                width:100%;
-                height:420px;
-                border:0.5px solid rgb(255, 255, 255);
-                /* padding:15px; */
-        
-            
+        .itemca {
+            width: 100%;
+            height: 280px;
+            border: 1px solid white;
+
         }
 
-        
-      
+        .itemcb {
+
+            /* margin-top:15px; */
+            width: 100%;
+            height: 420px;
+            border: 0.5px solid rgb(255, 255, 255);
+            /* padding:15px; */
+        }
+
+        .us1 {
+            width: 50%;
+        }
+
+        .ac1 {
+            width: 100%;
+            height: 100%;
+            background-image: url('img/ac1.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ac2 {
+            width: 100%;
+            height: 100%;
+            background-image: url('img/ac2.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ac3 {
+            width: 100%;
+            height: 100%;
+            background-image: url('img/ac1.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .acwrap {
+            padding: 0 70px 60px 70px;
+
+        }
+
+        .uswrap {
+            padding: 0 80px 80px 80px;
+        }
+
+        .footer {
+            font-size: 32px;
+            text-align: center;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+        }
     </style>
 </head>
 
 <body>
-   
-        <div class="navigation">
-            <div class="dropdown">
-                <div class="dropbtn">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
+    <div class="navigation">
+        <div class="dropdown">
+            <div class="dropbtn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </div>
-    
-   <div class="dropdown-content">
-            <a href="#">首頁</a>
-            <a href="#">KAYAKING</a>
-            <a href="#">活動主題</a>
-            <a href="#">常見問題</a>
-            <a href="#">活動影片</a>
-            <a href="#">線上報名</a>
+    </div>
+
+    <div class="dropdown-content">
+        <a href="#">首頁</a>
+        <a href="#">KAYAKING</a>
+        <a href="#">活動主題</a>
+        <a href="#">常見問題</a>
+        <a href="#">活動影片</a>
+        <a href="#">線上報名</a>
     </div>
 
     <div class="bg-img1">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-12">
+                <div class="col">
                     <div class="item1 ">
                         <div class="item-a bg-img4">
                             <div class="imrl">
+
                                 <p>活動主題</p>
-                                <a href=""><span class="index_linkl">前往連結</span></a>
+                                <a href="">
+                                    <span class="index_linkl">前往連結</span>
+                                </a>
                             </div>
                         </div>
                         <div class="item-b">
                             <div class="imrl_bottoml">
                                 <p>常見問題</p>
-                                <a href=""><span class="index_linkbotl">前往連結</span></a>
+                                <a href="">
+                                    <span class="index_linkbotl">前往連結</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-6 col-md-12">
+                <div class="col">
                     <div class="item bg-img3">
                         <div class=im>
                             <p>KAYAKING</p>
-                            <a href=""><span class="index_linkm">前往連結</span></a>
+                            <a href="">
+                                <span class="index_linkm">前往連結</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-12">
+                <div class="col">
                     <div class="item2">
                         <div class="item-a bg-img5">
                             <div class="imrl">
-                                    <p>活動影片</p>
-                                    <a href=""><span class="index_linkr">前往連結</span></a>
+                                <p>活動影片</p>
+                                <a href="">
+                                    <span class="index_linkr">前往連結</span>
+                                </a>
                             </div>
                         </div>
                         <div class="item-b">
                             <div class="imrl_bottomr">
-                                    <p>線上報名</p>
-                                    <a href=""><span class="index_linkbotr">前往連結</span></a>
+                                <p>線上報名</p>
+                                <a href="">
+                                    <span class="index_linkbotr">前往連結</span>
+                                </a>
                             </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="aboutus">
-        <p>KAYAKING</p>
-        <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="itemus">
-                            <span>跟著我們探索美麗的台灣，我們很享受我們工作，可以運動旅遊行程安排規劃<br/>
-                            了解對環境的友善，以最環保的方式接觸大自然，我們一直在擴張，每年不斷<br/>
-                            地參加專業訓練取得證照，並投資最專業舒適的裝備，只想讓大家玩得更安全<br/>
-                            、更有趣，「安全是我們第一考量、舒適也是必備」，跟著我們的節奏一起動<br/>
-                            起來，用你的身體感受台灣湖、和、海的美，超愛呀。對了對了，運動的好處<br/>
-                            會讓您更年輕、更健康,一起來划吧!
-                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col"><div class="itemusb bg-img6"></div></div>
-                    <div class="col"><div class="itemusb bg-img7"></div></div>
-                </div>
+            </div>
+
         </div>
     </div>
-    <div class="activity_theme">
-            <p>活動主題</p>
-            <div class="container">
-                    <div class="row">
-                            <div class="col">
-                                <div class="itemactive bg-img8"></div>
-                            </div>
-                            <div class="col">
-                                <div class="itemactive bg-img9"></div>
-                            </div>
-                            
+    <div class="aboutus kbg2">
+        <p>KAYAKING</p>
+        <div class="container uswrap">
+            <div class="row ">
+                <div class="col">
+                    <div class="itemus">
+                        <span>跟著我們探索美麗的台灣，我們很享受我們工作，可以運動旅遊行程安排規劃
+                            <br/> 了解對環境的友善，以最環保的方式接觸大自然，我們一直在擴張，每年不斷
+                            <br/> 地參加專業訓練取得證照，並投資最專業舒適的裝備，只想讓大家玩得更安全
+                            <br/> 、更有趣，「安全是我們第一考量、舒適也是必備」，跟著我們的節奏一起動
+                            <br/> 起來，用你的身體感受台灣湖、和、海的美，超愛呀。對了對了，運動的好處
+                            <br/> 會讓您更年輕、更健康,一起來划吧!
+                        </span>
                     </div>
-        
+                </div>
             </div>
+            <div class="row">
+                <div class="us1">
+                    <div class="itemusb ">
+                        <div class="bg-img6"></div>
+                    </div>
+                </div>
+                <div class="us1">
+                    <div class="itemusb itemusb2 ">
+                        <div class="bg-img7"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="activity_contentsea kbg3">
+        <p>活動主題</p>
+        <div class="container">
+            <div class="row acwrap">
+                <div class="col">
+                    <div class="itemc ">
+                        <div class="ac1"></div>
+                        <!-- <div class="itemca"></div>
+                                        <div class="itemcb"></div> -->
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="itemc">
+                        <div class="ac2"></div>
+                        <!-- <div class="itemca"></div>
+                                        <div class="itemcb"></div> -->
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="itemc">
+                        <div class="ac3"></div>
+                        <!-- <div class="itemca"></div>
+                                        <div class="itemcb"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
-    <div class="activity_contentsea">
-            <p>海上獨木舟</p>
-            <div class="container">
-                    <div class="row">
-                            <div class="col">
-                                <div class="itemc">
-                                        <div class="itemca"></div>
-                                        <div class="itemcb"></div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="itemc">
-                                        <div class="itemca"></div>
-                                        <div class="itemcb"></div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                 <div class="itemc">
-                                        <div class="itemca"></div>
-                                        <div class="itemcb"></div>
-                                 </div>
-                            </div>
-                    </div>
-            </div>
+    <div class="footer">KAYAKING</div>
 
-    </div>
-    <div class="activity_contentland">
-            <p>內陸獨木舟</p>
-            <div class="container">
-                    <div class="row">
-                            <div class="col">
-                                <div class="itemc">
-                                    <div class="itemca"></div>
-                                    <div class="itemcb"></div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="itemc">
-                                    <div class="itemca"></div>
-                                    <div class="itemcb"></div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                 <div class="itemc">
-                                    <div class="itemca"></div>
-                                    <div class="itemcb"></div>
-                                 </div>
-                            </div>
-                    </div>
-                    
-            </div>
 
-    </div>
 
 
     <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="js/unslider-min.js"></script> -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        $('.dropdown').click(function(){
-        $('.dropdown-content').toggleClass('active');
-        $('.dropbtn div:nth-child(1)').toggleClass('b1');
-        $('.dropbtn div:nth-child(2)').toggleClass('b2');
-        $('.dropbtn div:nth-child(3)').toggleClass('b3');
-        
-       
-    })
+        $('.dropdown').click(function () {
+            $('.dropdown-content').toggleClass('active');
+            $('.dropbtn div:nth-child(1)').toggleClass('b1');
+            $('.dropbtn div:nth-child(2)').toggleClass('b2');
+            $('.dropbtn div:nth-child(3)').toggleClass('b3');
+
+
+        })
     </script>
+    <!-- <script>
+        jQuery(document).ready(function ($) {
+            $('.my-slider').unslider({
+                
+
+            });
+        });
+    </script> -->
+
 </body>
 
 </html>
